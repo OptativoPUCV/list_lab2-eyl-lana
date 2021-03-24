@@ -351,3 +351,9 @@ Wed Mar 24 18:35:48 UTC 2021:
  tests:  2|5
 total_score: 15/70
 20e4647
+Wed Mar 24 18:37:06 UTC 2021: 
+ list.c | 5 ++---
+ 1 file changed, 2 insertions(+), 3 deletions(-)
+ tests:  2|5
+total_score: 15/70
+dc438dd

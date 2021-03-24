@@ -59,8 +59,9 @@ void * nextList(List * list) {
     list->current = nodo;
   }
   else return NULL;
+
   return (void *) nodo->data;
-  //free(nodo);
+  free(nodo);
   //return NULL;
 }
 

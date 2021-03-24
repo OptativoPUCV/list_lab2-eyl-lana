@@ -57,8 +57,9 @@ void * nextList(List * list) {
   Node *nodo = list->current->next;
   while (nodo == NULL){
     list->tail = nodo;
-    list->current = nodo;
+    nodo = nodo->next;
   }
+  list->current = nodo;
   return (void *) nodo->data;
 
   /*Node *nodo = list->current;

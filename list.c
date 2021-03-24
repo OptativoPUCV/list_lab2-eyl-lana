@@ -56,11 +56,12 @@ void * nextList(List * list) {
 
   Node *nodo = list->current;
   if (nodo != NULL){
-    list->current->next = nodo;
+    nodo->next = nodo;
   }
   else return NULL;
 
   return (void *) nodo->data;
+  free(nodo);
   //return NULL;
 }
 

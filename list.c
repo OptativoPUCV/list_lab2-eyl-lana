@@ -59,6 +59,7 @@ void * nextList(List * list) {
     nodo = nodo->next;
     //return (void *) nodo->data;
   }
+  else return NULL;
   return (void *) nodo->data;
   free(nodo);
 

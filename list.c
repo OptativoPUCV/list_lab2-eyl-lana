@@ -60,6 +60,7 @@ void * nextList(List * list) {
     nodo->next = list->current->next;
   }
   else return NULL;
+  list->current->next = nodo->next;
   return (void *) nodo->next->data;
 
   /*Node *nodo = list->head;

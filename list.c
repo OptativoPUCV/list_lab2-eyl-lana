@@ -67,16 +67,10 @@ void * nextList(List * list) {
     nodo = nodo->next;
   }
   nodo->next = nodo;
+  nodo->next->next = NULL;
   return (void *) nodo->data;
 
-  /*Node *nodo;
-  while (list->current != NULL){
-    nodo = list->current->next;
-    nodo->prev = list->current;
-  }
-  nodo->next = NULL;
-
-  return (void *) nodo->data;*/
+  return (void *) nodo->data;
   free(nodo);
   //return NULL;
 }

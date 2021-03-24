@@ -61,7 +61,7 @@ void * nextList(List * list) {
   }
   else return NULL;
   return (void *) nodo->data;
-  //free(nodo);
+  free(nodo);
   //return NULL;
 }
 

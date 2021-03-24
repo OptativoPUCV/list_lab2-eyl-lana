@@ -1,0 +1,20 @@
+Wed Mar 24 00:59:17 UTC 2021: 
+ list.c | 10 +++++++++-
+ 1 file changed, 9 insertions(+), 1 deletion(-)
+In file included from test.c:5:0:
+list.c: In function ‘createList’:
+list.c:33:33: error: implicit declaration of function ‘sifeoz’; did you mean ‘feof’? [-Werror=implicit-function-declaration]
+   List *list = (List *) malloc (sifeoz(List));
+                                 ^~~~~~
+                                 feof
+list.c:33:40: error: expected expression before ‘List’
+   List *list = (List *) malloc (sifeoz(List));
+                                        ^~~~
+cc1: all warnings being treated as errors
+Compilation failed
+Wed Mar 24 00:59:26 UTC 2021: 
+ list.c | 10 +++++++++-
+ 1 file changed, 9 insertions(+), 1 deletion(-)
+ tests:  1|5
+total_score: 10/70
+b75a095

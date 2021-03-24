@@ -46,7 +46,7 @@ void * firstList(List * list) {
   }
   else return NULL;
 
-  return list->head;
+  return (void *) list->head->data;
   /*Node *nodo = list->head;
   if (nodo != NULL){
     list->current = nodo;
@@ -65,7 +65,7 @@ void * nextList(List * list) {
   }
   else return NULL;
 
-  return list->current;
+  return (void *) list->current->data;
 
   /*Node *nodo = list->current;
   if (nodo != NULL){

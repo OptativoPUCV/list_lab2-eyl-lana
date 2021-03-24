@@ -60,7 +60,7 @@ void * nextList(List * list) {
     //nodo = nodo->prev;
   }
   return (void *) nodo->data;
-  free(nodo);
+  //free(nodo);
   //return NULL;
 }
 

@@ -45,8 +45,9 @@ void * firstList(List * list) {
   if (nodo != NULL){
     list->current = nodo;
   }
+  else return NULL;
 
-  return (nodo);
+  return nodo;
   free(nodo);
   //return NULL;
 }

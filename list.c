@@ -69,7 +69,7 @@ void * nextList(List * list) {
     nodo = nodo->next;
     list->current = nodo;
   }
-  nodo->next = nodo;
+  //nodo->next = nodo;
   list->current = nodo;
   return (void *) nodo->data;
 

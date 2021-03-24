@@ -58,6 +58,7 @@ void * nextList(List * list) {
   if (nodo->next != NULL){
     list->current->next = nodo->next;
   }
+  else return NULL;
   nodo->next = list->current->next;
   return (void *) nodo->next->data;
 

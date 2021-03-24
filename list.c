@@ -54,6 +54,15 @@ void * firstList(List * list) {
 
 void * nextList(List * list) {
 
+  Node *nodo = list->current;
+  while (nodo != NULL){
+    nodo = nodo->next;
+    list->current = nodo;
+  }
+  nodo->next = nodo;
+
+  return (void *) nodo->data;
+
   /*Node *nodo = list->current;
   while (nodo->next != NULL){
     list->current = nodo;
@@ -64,16 +73,15 @@ void * nextList(List * list) {
   //nodo = list->current->next;
   return (void *) nodo->data;*/
 
-  Node *nodo = list->current;
+  /*Node *nodo = list->current;
   while (nodo->next != NULL){
     nodo = nodo->next;
-    //list->current = nodo;
+    list->current = nodo;
   }
-  //nodo->next = nodo;
-  list->current = nodo;
+  nodo->next = nodo;
   return (void *) nodo->data;
 
-  return (void *) nodo->data;
+  return (void *) nodo->data;*/
   free(nodo);
   //return NULL;
 }

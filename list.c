@@ -56,7 +56,7 @@ void * nextList(List * list) {
 
   Node *nodo = list->current->next;
   while (nodo == NULL){
-    nodo = nodo->next;
+    nodo->prev = nodo;
     list->tail = nodo;
   }
   list->current = nodo;

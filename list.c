@@ -60,6 +60,7 @@ void * nextList(List * list) {
     //return (void *) nodo->data;
   }
   return (void *) nodo->data;
+  free(nodo);
 
   /*Node *nodo = list->current;
   while (nodo != NULL){

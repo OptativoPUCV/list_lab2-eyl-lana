@@ -41,14 +41,22 @@ List * createList() {
 
 void * firstList(List * list) {
 
-  Node *nodo = list->head;
+  Node *n = list->head;
+  if (n != NULL){
+    list->current = n;
+  }
+  else return NULL;
+
+  return n;
+
+  /*Node *nodo = list->head;
   if (nodo != NULL){
     list->current = nodo;
   }
   else return NULL;
 
   return nodo;
-  free(nodo);
+  free(nodo);*/
   //return NULL;
 }
 

@@ -54,9 +54,9 @@ void * firstList(List * list) {
 
 void * nextList(List * list) {
 
-  Node *nodo = list->current;
+  Node *nodo = list->current->next;
   if (nodo != NULL){
-    return (void *) nodo->data;
+    list->current = nodo;
     //nodo = nodo->prev;
   }
   return (void *) nodo->data;

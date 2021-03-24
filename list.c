@@ -54,12 +54,11 @@ void * firstList(List * list) {
 
 void * nextList(List * list) {
 
-  Node *nodo;
-  while (nodo != NULL){
-    nodo = list->current->next;
+  Node *nodo = list->current->next;
+  if (nodo != NULL){
     list->current = nodo;
   }
-  //if (nodo == NULL) return NULL;
+  else return NULL;
   return (void *) nodo->data;
   //free(nodo);
   //return NULL;

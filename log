@@ -481,3 +481,9 @@ Wed Mar 24 18:54:57 UTC 2021:
  1 file changed, 1 insertion(+), 1 deletion(-)
  tests:  0|0
 eb64784
+Wed Mar 24 18:55:35 UTC 2021: 
+ list.c | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+ tests:  2|5
+total_score: 15/70
+fac0dac

@@ -801,3 +801,9 @@ Thu Mar 25 03:43:26 UTC 2021:
  1 file changed, 2 insertions(+), 1 deletion(-)
  tests:  0|0
 74ba8a2
+Thu Mar 25 03:45:50 UTC 2021: 
+ list.c | 10 +---------
+ 1 file changed, 1 insertion(+), 9 deletions(-)
+ tests:  3|5
+total_score: 15/70
+b0953c8

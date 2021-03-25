@@ -101,7 +101,8 @@ void * lastList(List * list) {
 
 void * prevList(List * list) {
 
-  Node *nodo = list->current->prev;
+  Node *nodo = list->current;
+  nodo = nodo->prev;
   if (nodo != NULL){
     list->current = nodo;
   }

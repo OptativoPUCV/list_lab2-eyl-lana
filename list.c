@@ -100,7 +100,16 @@ void * lastList(List * list) {
 }
 
 void * prevList(List * list) {
-    return NULL;
+
+  Node *nodo = list->current->prev;
+  if (nodo != NULL){
+    list->current = nodo;
+  }
+  else return NULL;
+
+  return (void *) nodo->data;
+  free(nodo);
+  //return NULL;
 }
 
 void pushFront(List * list, const void * data) {

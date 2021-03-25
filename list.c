@@ -58,10 +58,10 @@ void * nextList(List * list) {
   return (void *) list->current->data;*/
 
   Node *nodo = list->current;
-  if (nodo != NULL){
+  while (nodo != NULL){
     nodo = nodo->next;
   }
-  else return NULL;
+  //else return NULL;
   list->current = nodo->next;
 
   return (void *) nodo->data;

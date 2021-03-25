@@ -60,9 +60,10 @@ void * nextList(List * list) {
   Node *nodo = list->current;
   while (nodo != NULL){
     nodo = nodo->next;
+    list->current = nodo;
   }
   //else return NULL;
-  list->current = nodo;
+  //list->current = nodo;
 
   return (void *) nodo->data;
 

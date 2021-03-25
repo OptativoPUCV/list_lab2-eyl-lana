@@ -87,7 +87,16 @@ void * nextList(List * list) {
 }
 
 void * lastList(List * list) {
-    return NULL;
+
+  Node *nodo = list->tail;
+  if (nodo != NULL){
+    list->current = nodo;
+  }
+  else return NULL;
+
+  return (void *) nodo->data;
+  free(nodo);
+  //return NULL;
 }
 
 void * prevList(List * list) {

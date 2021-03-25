@@ -101,14 +101,14 @@ void * lastList(List * list) {
 
 void * prevList(List * list) {
 
-  Node *nodo = list->current;
+  /*Node *nodo = list->current;
   nodo = nodo->prev;
   if (nodo != NULL){
     list->current = nodo;
   }
   else return NULL;
   return (void *) nodo->data;
-  free(nodo);
+  free(nodo);*/
 
   /*Node *nodo = list->current;
   if (nodo != NULL){
@@ -118,7 +118,7 @@ void * prevList(List * list) {
 
   return (void *) nodo->data;
   free(nodo);*/
-  //return NULL;
+  return NULL;
 }
 
 void pushFront(List * list, const void * data) {

@@ -57,15 +57,14 @@ void * nextList(List * list) {
   /*list->current = list->current->next;
   return (void *) list->current->data;*/
 
-  Node *nodo = list->current;
-  while (nodo != NULL){
+  /*Node *nodo = list->current;
+  if (nodo != NULL){
     nodo = nodo->next;
-    list->current = nodo;
   }
-  //else return NULL;
-  //list->current = nodo;
+  else return NULL;
+  list->current = nodo->;
 
-  return (void *) nodo->data;
+  return (void *) nodo->data;*/
 
   /*Node *nodo = list->current;
   while (nodo != NULL){
@@ -84,7 +83,7 @@ void * nextList(List * list) {
   return (void *) nodo->data;
 
   return (void *) nodo->data;*/
-  //return NULL;
+  return NULL;
 }
 
 void * lastList(List * list) {

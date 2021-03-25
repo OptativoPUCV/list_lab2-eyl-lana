@@ -96,19 +96,19 @@ void * lastList(List * list) {
 
   return (void *) nodo->data;
   free(nodo);
-  
+
 }
 
 void * prevList(List * list) {
 
-  /*Node *nodo = list->current;
+  Node *nodo = list->current;
   if (nodo != NULL){
-    list->current = nodo->prev;
+    nodo->prev = list->current;
   }
   else return NULL;
-
+  list->current = nodo->prev;
   return (void *) nodo->data;
-  free(nodo);*/
+  free(nodo);
   return NULL;
 }
 
@@ -144,7 +144,7 @@ void * popBack(List * list) {
 }
 
 void * popCurrent(List * list) {
-    return NULL;
+  return NULL;
 }
 
 void cleanList(List * list) {

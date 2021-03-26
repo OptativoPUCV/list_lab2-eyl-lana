@@ -56,7 +56,7 @@ void * nextList(List * list) {
   Node *nodo = list->current->next;
   list->current = nodo;
 
-  return nodo;
+  return (void *) nodo;
 }
 
 void * lastList(List * list) {

@@ -69,19 +69,18 @@ void * lastList(List * list) {
 
   return (void *) list->current->data;
 
-  /*Node *nodo = list->tail;
-  if (nodo != NULL){
-    list->current = nodo;
-  }
-  else return NULL;
-
-  return (void *) nodo->data;
-  free(nodo);*/
-
 }
 
 void * prevList(List * list) {
-  return NULL;
+
+  if (list->current && list->current->prev != NULL){
+    list->current = list->current->prev;
+  }
+  else return NULL;
+
+  return (void *) list->current->data;
+
+  //return NULL;
 }
 
 void pushFront(List * list, const void * data) {

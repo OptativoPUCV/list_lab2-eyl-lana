@@ -120,13 +120,13 @@ void pushCurrent(List * list, const void * data) {
     nodo->prev = NULL;
   }
   
-  if (list->current->next == nodo){
-    list->tail = nodo;
-  }
-
-  /*if (list->tail == list->current){
+  /*if (list->current->next == nodo){
     list->tail = nodo;
   }*/
+
+  if (list->tail == list->current){
+    list->tail = nodo;
+  }
 
 }
 

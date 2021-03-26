@@ -140,7 +140,7 @@ void * popCurrent(List * list) {
     nodo->next->prev = nodo->prev;
   }
 
-  return (void *) nodo->data;
+  return (void *) list->current->data;
 }
 
 void cleanList(List * list) {

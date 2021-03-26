@@ -145,38 +145,15 @@ void * popCurrent(List * list) {
   Node *nodo = list->current;
 
   if (nodo == NULL) return NULL;
-  
-  if (nodo->next == NULL){
-    list->tail = nodo->prev;
-  }
-  else{
-    nodo->next->prev = nodo->prev;
-  }
 
-  if (nodo->prev == NULL){
-    list->head = nodo->next;
-  }
-  else{
-    nodo->prev->next = nodo->next;
-  }
+  if (nodo->next == NULL) list->tail = nodo->prev;
+  else nodo->next->prev = nodo->prev;
+
+  if (nodo->prev == NULL) list->head = nodo->next;
+  else nodo->prev->next = nodo->next;
 
   return (void *) nodo->data;
-
-  /*Node *nodo = list->current;
-  //Node *aux = list->current;
-  if (nodo != NULL){
-    nodo->prev->next = nodo->next;
-    list->current = nodo->next;
-  }
-  else{
-    list->head = nodo->next;
-  }
-
-  if (nodo->next != NULL){
-    nodo->next->prev = nodo->prev;
-  }
-
-  return (void *) nodo->data;*/
+  
 }
 
 void cleanList(List * list) {

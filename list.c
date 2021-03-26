@@ -102,10 +102,6 @@ void pushBack(List * list, const void * data) {
 }
 
 void pushCurrent(List * list, const void * data) {
-  
-  if (list->current && list->current->next != NULL){
-    list->current->next = (void *) data;
-  }
 }
 
 void * popFront(List * list) {

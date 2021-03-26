@@ -142,6 +142,7 @@ void * popCurrent(List * list) {
   }
 
   return (void *) aux->data;
+  free(nodo);
 }
 
 void cleanList(List * list) {

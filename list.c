@@ -142,6 +142,16 @@ void * popBack(List * list) {
 
 void * popCurrent(List * list) {
 
+  Node *nodo = list->current;
+  if (nodo != NULL){
+    nodo->prev->next = nodo->next->prev;
+  }
+  else{
+    return NULL;
+  }
+
+  return (void *) nodo->data;
+
   /*Node *nodo = list->current;
   //Node *aux = list->current;
   if (nodo != NULL){
@@ -157,7 +167,6 @@ void * popCurrent(List * list) {
   }
 
   return (void *) nodo->data;*/
-  return NULL;
 }
 
 void cleanList(List * list) {

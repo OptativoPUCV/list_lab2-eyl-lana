@@ -84,14 +84,15 @@ void * prevList(List * list) {
 
 void pushFront(List * list, const void * data) {
   
-  Node *nodo = (void *) data;
+  Node *nodo = createNode(data);
   nodo->next = list->head;
-  if (list->head && nodo != NULL){
+  list->head = nodo;
+  /*if (list->head != NULL){
     list->head->prev = nodo;
   }
   list->head = nodo;
   nodo->prev = NULL;
-  free(nodo);
+  free(nodo);*/
 
 }
 

@@ -53,10 +53,13 @@ void * firstList(List * list) {
 }
 
 void * nextList(List * list) {
-  Node *nodo = list->current->next;
-  list->current = nodo;
 
-  return (void *) nodo->data;
+  if (list->current && list->current->next != NULL){
+    list->current = list->current->next;
+  }
+  else return NULL;
+
+  return (void *) list->current->data;
 }
 
 void * lastList(List * list) {

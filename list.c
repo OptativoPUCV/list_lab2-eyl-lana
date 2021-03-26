@@ -89,6 +89,7 @@ void pushFront(List * list, const void * data) {
 
   if (list->head == NULL){
     createList();
+    list->tail = nodo;
   }
 
   if (list->head != NULL){

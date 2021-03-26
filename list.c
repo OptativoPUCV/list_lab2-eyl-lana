@@ -139,8 +139,9 @@ void * popCurrent(List * list) {
   if (nodo->next != NULL){
     nodo->next->prev = nodo->prev;
   }
+  list->current = nodo->next;
 
-  return (void *) list->current->data;
+  return (void *) nodo->data;
 }
 
 void cleanList(List * list) {

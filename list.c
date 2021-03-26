@@ -80,19 +80,13 @@ void * prevList(List * list) {
 
   return (void *) list->current->data;
 
-  //return NULL;
 }
 
 void pushFront(List * list, const void * data) {
   
   Node *nodo = (void *) data;
   nodo->next = list->head;
-  if (list->head != NULL){
-    list->head->prev = nodo;
-  }
-  else{
-    list->head = firstList(list);
-    list->head = list->tail;
+  if (list->head && nodo != NULL){
     list->head->prev = nodo;
   }
   list->head = nodo;

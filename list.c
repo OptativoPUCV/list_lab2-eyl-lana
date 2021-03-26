@@ -59,7 +59,7 @@ void * nextList(List * list) {
   }
   else return NULL;
 
-  return (void *) nodo;
+  return (void *) nodo->data;
 }
 
 void * lastList(List * list) {

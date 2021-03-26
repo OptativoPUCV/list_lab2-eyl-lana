@@ -67,7 +67,7 @@ void * lastList(List * list) {
   }
   else return NULL;
 
-  return (void *) list->current->data;
+  return (void *) list->tail->data;
 
   /*Node *nodo = list->tail;
   if (nodo != NULL){

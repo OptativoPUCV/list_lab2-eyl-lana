@@ -145,6 +145,7 @@ void * popCurrent(List * list) {
   Node *nodo = list->current;
   if (nodo != NULL){
     nodo->prev->next = nodo->next->prev;
+    list->current = nodo->next;
   }
   else{
     return NULL;

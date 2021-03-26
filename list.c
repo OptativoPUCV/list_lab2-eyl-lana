@@ -88,15 +88,13 @@ void pushFront(List * list, const void * data) {
   nodo->next = list->head;
   if (list->head != NULL){
     list->head->prev = nodo;
-    list->head = nodo;
   }
-
-  if (list->head && list->tail == NULL){
+  else{
     //createList();
-    list->head = nodo;
     list->tail = nodo;
     list->current = nodo;
   }
+  list->head = nodo;
   nodo->prev = NULL;
   free(nodo);
 

@@ -60,9 +60,9 @@ void * nextList(List * list) {
   }
   else return NULL;
 
-  free(nodo);
   return (void *) nodo->data;
-
+  free(nodo);
+  
   /*if (list->current && list->current->next != NULL){
     list->current = list->current->next;
   }

@@ -53,36 +53,6 @@ void * firstList(List * list) {
 }
 
 void * nextList(List * list) {
-
-  /*list->current = list->current->next;
-  return (void *) list->current->data;*/
-
-  /*Node *nodo = list->current;
-  if (nodo != NULL){
-    nodo = nodo->next;
-  }
-  else return NULL;
-  list->current = nodo->;
-
-  return (void *) nodo->data;*/
-
-  /*Node *nodo = list->current;
-  while (nodo != NULL){
-    nodo = nodo->next;
-  }
-  nodo = list->current->next;
-  list->current = nodo;
-
-  return (void *) nodo->data;*/
-
-  /*Node *nodo = list->current;
-  while (nodo->next != NULL){
-    nodo = nodo->next;
-  }
-  nodo->next = nodo;
-  return (void *) nodo->data;
-
-  return (void *) nodo->data;*/
   return NULL;
 }
 
@@ -100,24 +70,6 @@ void * lastList(List * list) {
 }
 
 void * prevList(List * list) {
-
-  /*Node *nodo = list->current;
-  nodo = nodo->prev;
-  if (nodo != NULL){
-    list->current = nodo;
-  }
-  else return NULL;
-  return (void *) nodo->data;
-  free(nodo);*/
-
-  /*Node *nodo = list->current;
-  if (nodo != NULL){
-    list->current = nodo->prev;
-  }
-  else return NULL;
-
-  return (void *) nodo->data;
-  free(nodo);*/
   return NULL;
 }
 

@@ -57,6 +57,7 @@ void * nextList(List * list) {
   if (list->current != NULL && nodo != NULL){
     list->current = nodo;
   }
+  else return NULL;
 
   return (void *) nodo;
 }

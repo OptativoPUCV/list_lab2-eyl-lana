@@ -84,11 +84,15 @@ void * prevList(List * list) {
 }
 
 void pushFront(List * list, const void * data) {
-  Node *nodo = list->head;
-  if (nodo != NULL){
-    nodo->prev = nodo;
+  
+  Node *nodo = (void *) data;
+  nodo->next = list->head;
+  if (list->head != NULL){
+    list->head->prev = nodo;
   }
-  nodo = nodo->prev;
+  list->head = nodo;
+  nodo->prev = NULL;
+  
 }
 
 void pushBack(List * list, const void * data) {

@@ -53,7 +53,10 @@ void * firstList(List * list) {
 }
 
 void * nextList(List * list) {
-  return NULL;
+  Node *nodo = list->current->next;
+  list->current = nodo;
+
+  return nodo;
 }
 
 void * lastList(List * list) {

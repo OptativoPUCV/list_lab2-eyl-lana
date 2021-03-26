@@ -118,10 +118,6 @@ void pushCurrent(List * list, const void * data) {
     list->head = nodo;
   }
 
-  if (list->current->next == NULL){
-    pushBack(list, data);
-  }
-
 }
 
 void * popFront(List * list) {
